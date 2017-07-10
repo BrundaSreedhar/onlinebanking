@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fund Transfer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  <script>
+  function checkInp()
+{
+    var x=document.forms["myForm"]["age"].value;
+    var regex=/^[0-9]+$/;
+    if (x.match(regex))
+    {
+        alert("Must input numbers");
+        return false;
+    }
+}
+</script>
+<style>
+.form-group {
+    margin-bottom: 15px;
+    width: 70%;
+}
+</style>
+  </head>
+
+<body>
+<div class="container">
+  <h2>Transfer Funds</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="fromAcc">From:</label>
+		<select class="form-control" id="fromAcc">
+			<option class ="dropdown-menu"selected disabled>Select Account</option>
+			<option class="dropdown-item">SAV165872... Balance $7432</option>
+			<option class="dropdown-item">CHK165342... Balance $6573249</option>
+			<option class="dropdown-item">SAV121872... Balance $2662</option>
+			<option class="dropdown-item">SAV645872... Balance $55142</option>
+		</select>
+	</div>
+	 <div class="radio">
+      <label><input type="radio" name="otherCustomer"> Transfer Money To Different Customer </label>
+    </div>
+    <div class="form-group">
+      <label for="toAcc">To:</label>
+		<select class="form-control" id="toAcc">
+			<option class="dropdown-menu"selected disabled>Select Account</option>
+			<option class="dropdown-item">SAV165872... Balance $7432</option>
+			<option class="dropdown-item">CHK165342... Balance $6573249</option>
+			<option class="dropdown-item">SAV121872... Balance $2662</option>
+			<option class="dropdown-item">SAV645872... Balance $55142</option>
+		</select>
+    </div>
+	<div class="form-group">
+      <label for="frequency">Frequency:</label>
+      <input type="text" class="form-control" id="frequency" placeholder="Frequency" name="frequency">
+    </div>
+	<div class="form-group">
+		<label for="date">Send On:</label>
+			<div class="row">
+				<div class='col-sm-6'>
+					<div class="form-group">
+						<div class='input-group date' id='datetimepicker1'>
+						<input type='date' class="form-control" placeholder="Select Date" />
+						<span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+		</div>
+	</div>
+	
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="text" class="form-control" id="amount" placeholder="Enter Amount" name="amount">
+    </div>
+	<br>
+	 <input type="button" class="btn btn-default" value="Cancel">
+	 <input type="button" class="btn btn-info" value="Continue">
+  </form>
+</div>
+</body>
+</html>
