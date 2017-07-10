@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+  </head>
+  <body>
+<div class="container">
+	<div class="row">
+        <div class="span12" >
+    		<div class="" id="loginModal">
+              
+              <div class="modal-body" style="margin:auto;padding-top: 242px;padding-left: 100px;padding-right: 100px;width: 550px;">
+                <div class="well" style="height:340px">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#login" data-toggle="tab">Customer Login</a></li>
+                    <li><a href="#create" data-toggle="tab">Bank Employee Login</a></li>
+                  </ul>
+                  <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane active in" id="login">
+                      <form class="form-horizontal" action='' method="POST">
+                        <fieldset>
+                             
+                          <div class="control-group">
+                            <!-- Username -->
+                            <label style="margin-left:125px; margin-top:58px;" class="control-label"  for="username">Username</label>
+                            <div class="controls">
+                              <input type="text" style="margin-left:77px" id="username" name="username" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+     
+                          <div class="control-group">
+                            <!-- Password-->
+                            <label style="margin-left:125px" class="control-label" for="password">Password</label>
+                            <div class="controls">
+                              <input type="password" style="margin-left:77px" id="password" name="password" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+                          </br>
+     
+     
+                          <div class="control-group">
+                            <!-- Button -->
+                            <div class="controls">
+                              <button style="margin-left:129px" class="btn btn-success">Login</button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>                
+                    </div>
+                    <div class="tab-pane fade" id="create">
+                      <form class="form-horizontal" action='' method="POST">
+                       <fieldset>
+                             
+                          <div class="control-group">
+                            <!-- Username -->
+                            <label style="margin-left:125px" class="control-label"  for="username">Username</label>
+                            <div class="controls">
+                              <input type="text" style="margin-left:77px" id="username" name="username" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+     
+                          <div class="control-group">
+                            <!-- Password-->
+                            <label style="margin-left:125px" class="control-label" for="password">Password</label>
+                            <div class="controls">
+                              <input type="password" style="margin-left:77px" id="password" name="password" placeholder="" class="input-xlarge">
+                            </div>
+                          </div>
+                          </br>
+     
+     
+                          <div class="control-group">
+                            <!-- Button -->
+                            <div class="controls">
+                              <button style="margin-left:129px" class="btn btn-success">Login</button>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </form>     
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+	</div>
+</div>
+  </body>
+
+  </html>
