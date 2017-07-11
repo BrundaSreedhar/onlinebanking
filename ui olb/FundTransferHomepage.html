@@ -8,6 +8,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
+.form-group {
+    margin-bottom: 15px;
+    width: 70%;
+}
+
 h2{
 margin-top: 72px;
 }
@@ -65,6 +70,41 @@ border: none;
     background: #fff;
 }
 </style>
+
+
+
+
+
+<script>
+(function() {
+    $('form > input').keyup(function() {
+
+        var empty = false;
+        $('form > input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#register').attr('disabled', 'disabled');
+        } else {
+            $('#register').removeAttr('disabled');
+        }
+    });
+})()
+
+
+$(document).ready(function() {
+    $("input[name$='cars']").click(function() {
+        var test = $(this).val();
+
+        $("div.desc").hide();
+        $("#Cars" + test).show();
+    });
+});
+
+</script>
 </head>
 <body>
 <div class="navbar-wrapper">
@@ -82,8 +122,8 @@ border: none;
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li ><a href="CustomerHome.html" class="">Home</a></li>
-                        <li> <a href="CustomerProfile.html"> View Customer Profile </a></li>
+                        <li><a href="CustomerHome.html" class="">Home</a></li>
+                        <li ><a href="CustomerProfile.html" class="">View Customer Profile</a></li>
                         <li><a href="#">Statement Enquiry</a></li>
                         <li class="active"><a href="FundTransferHome.html">Fund Transfer</a></li>
                         
@@ -100,57 +140,83 @@ border: none;
         </nav>
     </div>
 </div>
-
 <div class="container">
-  <h2>Verify Fund Transfer</h2>
+  <h2>Transfer Funds</h2>
   <form action="/action_page.php">
     <div class="form-group">
       <label for="fromAcc">From:</label>
-      <p>from account details</p>
+    <select class="form-control" id="fromAcc">
+      <option class ="dropdown-menu"selected disabled>Select Account</option>
+      <option class="dropdown-item">SAV165872... Balance $7432</option>
+      <option class="dropdown-item">CHK165342... Balance $6573249</option>
+      <option class="dropdown-item">SAV121872... Balance $2662</option>
+      <option class="dropdown-item">SAV645872... Balance $55142</option>
+    </select>
   </div>
-  
-    <div class="form-group">
+  <div id="myRadioGroup">
+    <input type="radio" name="cars" checked="checked" value="2"  />Fund transfer between accounts</br>
+    <input type="radio" name="cars" value="3" />Fund transfer to other accounts
+
+    <div id="Cars2" class="desc">
+        <div class="form-group">
       <label for="toAcc">To:</label>
-   <p>To account details</p>
+    <select class="form-control" id="toAcc">
+      <option class="dropdown-menu"selected disabled>Select Account</option>
+      <option class="dropdown-item">SAV165872... Balance $7432</option>
+      <option class="dropdown-item">CHK165342... Balance $6573249</option>
+      <option class="dropdown-item">SAV121872... Balance $2662</option>
+      <option class="dropdown-item">SAV645872... Balance $55142</option>
+    </select>
     </div>
-  <div class="form-group">
-      <label for="frequency">Frequency:</label>
-        <p>frequency</p>
     </div>
+    <div id="Cars3" class="desc" style="display: none;">
+        <div class="form-group">
+      <label for="externalaccountnumber">To:</label>
+      <input type="text" class="form-control" id="extaccount" placeholder="Enter Account Number" name="extaccount">
+    </div>
+    </div>
+</div>
+
+
+   <!--<div class="radio">
+      <label><input type="radio" name="sameCustomer" checked="checked"> Transfer Money to a different Account of Mine </label>
+    </div>
+   <div class="radio">
+      <label><input type="radio" name="otherCustomer"> Transfer Money To Different Customer </label>
+    </div>-->
+    
+  
   <div class="form-group">
     <label for="date">Send On:</label>
-        <p>Send on date</p>
+      <div class="row">
+        <div class='col-sm-6'>
+          <div class="form-group">
+            <div class='input-group date' id='datetimepicker1'>
+            <input type='date' class="form-control" placeholder="Select Date" />
+            <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker();
+            });
+        </script>
+    </div>
   </div>
   
     <div class="form-group">
       <label for="amount">Amount:</label>
-        <p>amount</p>
+      <input type="text" class="form-control" id="amount" placeholder="Enter Amount" name="amount">
     </div>
   <br>
     <a href="CustomerHome.html" class="btn btn-default" role="button">Cancel</a>
-     <a href="FundTransferHome.html" class="btn btn-info" role="button">Edit</a>
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Submit</button>
-   
-
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Success</h4>
-        </div>
-        <div class="modal-body">
-          <p>Fund Transfer Successful!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-
+    <input type="submit" id="register" value="Register" disabled="disabled" />
+    <!--<button type="button" id="register" disabled="disabled" onclick="FundTransferVerification.html" class="btn btn-info" >Continue
+    </button>-->
+    </form>
+</div>
 </body>
 </html>
