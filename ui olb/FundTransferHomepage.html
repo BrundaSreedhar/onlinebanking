@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="submit_disable.js" type="text/javascript"></script>
 <style>
 .form-group {
     margin-bottom: 15px;
@@ -142,7 +143,7 @@ $(document).ready(function() {
 </div>
 <div class="container">
   <h2>Transfer Funds</h2>
-  <form action="/action_page.php">
+  <form action="#">
     <div class="form-group">
       <label for="fromAcc">From:</label>
     <select class="form-control" id="fromAcc">
@@ -154,28 +155,31 @@ $(document).ready(function() {
     </select>
   </div>
   <div id="myRadioGroup">
-    <input type="radio" name="cars" checked="checked" value="2"  />Fund transfer between accounts</br>
-    <input type="radio" name="cars" value="3" />Fund transfer to other accounts
-
-    <div id="Cars2" class="desc">
-        <div class="form-group">
-      <label for="toAcc">To:</label>
-    <select class="form-control" id="toAcc">
-      <option class="dropdown-menu"selected disabled>Select Account</option>
-      <option class="dropdown-item">SAV165872... Balance $7432</option>
-      <option class="dropdown-item">CHK165342... Balance $6573249</option>
-      <option class="dropdown-item">SAV121872... Balance $2662</option>
-      <option class="dropdown-item">SAV645872... Balance $55142</option>
-    </select>
+    <div class ="radio">
+      <input type="radio" name="cars" checked="checked" value="2"  />Fund transfer between accounts</br>
     </div>
+    <div class ="radio">
+      <input type="radio" name="cars" value="3" />Fund transfer to other accounts
     </div>
-    <div id="Cars3" class="desc" style="display: none;">
-        <div class="form-group">
-      <label for="externalaccountnumber">To:</label>
-      <input type="text" class="form-control" id="extaccount" placeholder="Enter Account Number" name="extaccount">
-    </div>
-    </div>
-</div>
+        <div id="Cars2" class="desc">
+             <div class="form-group">
+              <label for="toAcc">To:</label>
+              <select class="form-control" id="toAcc">
+                <option class="dropdown-menu"selected disabled>Select Account</option>
+                <option class="dropdown-item">SAV165872... Balance $7432</option>
+                <option class="dropdown-item">CHK165342... Balance $6573249</option>
+                <option class="dropdown-item">SAV121872... Balance $2662</option>
+                <option class="dropdown-item">SAV645872... Balance $55142</option>
+               </select>
+             </div>
+         </div>
+         <div id="Cars3" class="desc" style="display: none;">
+            <div class="form-group">
+               <label for="externalaccountnumber">To:</label>
+                  <input type="text" class="form-control" id="extaccount" placeholder="Enter Account Number" name="extaccount">
+             </div>
+         </div>
+  </div>
 
 
    <!--<div class="radio">
@@ -213,9 +217,7 @@ $(document).ready(function() {
     </div>
   <br>
     <a href="CustomerHome.html" class="btn btn-default" role="button">Cancel</a>
-    <input type="submit" id="register" value="Register" disabled="disabled" />
-    <!--<button type="button" id="register" disabled="disabled" onclick="FundTransferVerification.html" class="btn btn-info" >Continue
-    </button>-->
+    <input type="submit" id="submit" class="btn btn-info" value="Continue" disabled="disabled"/>
     </form>
 </div>
 </body>
