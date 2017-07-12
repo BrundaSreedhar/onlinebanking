@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+
+</style>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <title>Customer Home</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+        @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Kumar+One');
+
+a, a:hover, a:focus{outline:none; text-decoration:none;}
+h2{
+margin-top: 72px;
+}
+body{
+    background: #fff;
+}
+.navbar, .dropdown-menu{
+background:#cc0000;
+border: none;
+
+}
+
+.nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
+  border-bottom: 3px solid transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+  border-bottom: 3px solid transparent;
+  background: none;
+}
+.navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
+ color: #fff;
+}
+.dropdown-menu{
+      -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+5), .nav li.active:nth-child(8n+5){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+6), .nav li.active:nth-child(8n+6){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+7), .nav li.active:nth-child(8n+7){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
+  border-bottom: #3px solid;
+}
+
+.navbar-toggle .icon-bar{
+    color: #fff;
+    background: #fff;
+}
+
+h2{float:left; width:100%; color:#fff; margin-bottom:30px; font-size: 14px;}
+h2 span{font-family: 'Kumar One', cursive; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px;}
+h2 a{color:#fff; font-weight:bold;}
+.gg{
+  color:white;
+}
+
+section{
+    
+    float:left;
+    width:100%;
+    background: #43cea2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+background: white; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+padding:30px 0;
+}
+
+
+.card {
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom:1px;
+    border:none;
+}
+.card-header:first-child {
+    border-radius: 0;
+}
+.card-header {
+    background-color: #AD1D23;
+    margin-bottom: 0;
+    padding: 20px 1.25rem;
+    border:none;
+    
+}
+.card-header a i{
+    float:left;
+    font-size:25px;
+    padding:5px 0;
+    margin:0 25px 0 0px;
+    color:#fff;
+}
+.card-header i{
+    float:right;        
+    font-size:30px;
+    width:1%;
+    margin-top:8px;
+    margin-right:10px;
+}
+.card-header a{
+    width:97%;
+    float:left;
+    color:#565656;
+}
+.card-header p{
+    margin:0;
+
+}
+
+.card-header h3{
+    margin:0 0 0px;
+    font-size:20px;
+    font-family: 'Slabo 27px', serif;
+    font-weight:bold;
+    color:#fff;
+}
+.card-block {
+    -moz-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 20px;
+    color:#232323;
+    box-shadow:inset 0px 4px 5px rgba(0,0,0,0.1);
+    border-top:1px soild #000;
+    border-radius:0;
+}
+.fa{
+  color:#fff;
+}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+</head>
+<body>
+
+<section>
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-8 offset-md-2">
+                <div class="bd-example" data-example-id="">
+<div id="accordion" role="tablist" aria-multiselectable="true">
+ 
+
+  <div class="card" >
+    <div class="card-header" role="tab" id="headingOne">
+      <div class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+          <i class="fa fa-usd" aria-hidden="true"></i>
+            <h3>AccountName</h3>
+            <p class="gg">76524XXXXXXXX832</p>
+        </a>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </div>
+    </div>
+
+    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="">
+      <div class="card-block">
+       <p>Balance $10,000</p>
+       <p>Branch: Chicago</p>
+       <p>Last Transaction on ...</p>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="card">
+    <div class="card-header" role="tab" id="headingTwo">
+      <div class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+          <i class="fa fa-usd" aria-hidden="true"></i>
+            <h3>AccountName</h3>
+            <p class="gg">91124XXXXXXXX832</p>
+        </a>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" aria-expanded="false">
+      <div class="card-block">
+        <p>Balance $10,000</p>
+       <p>Branch: Chicago</p>
+       <p>Last Transaction on ...</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab" id="headingThree">
+      <div class="mb-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+          <i class="fa fa-usd" aria-hidden="true"></i>
+            <h3>AccountName</h3>
+            <p class="gg">97624XXXXXXXX832</p>
+        </a>
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" aria-expanded="false">
+      <div class="card-block">
+         <p>Balance $10,000</p>
+       <p>Branch: Chicago</p>
+       <p>Last Transaction on ...</p>
+      </div>
+    </div>
+  </div>
+ 
+   </div>   
+    </div>
+</div>
+</div>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

@@ -1,14 +1,33 @@
 <!DOCTYPE html>
+
+<html>
+
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Customer Profile</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+
 <style>
-h2{
+              input.hidden {
+    position: absolute;
+    left: -9999px;
+}
+
+#profile-image1 {
+    cursor: pointer;
+  
+     width: 100px;
+    height: 100px;
+  border:2px solid #03b1ce ;}
+  .tital{ font-size:16px; font-weight:500;}
+   .bot-border{ border-bottom:1px #f8f8f8 solid;  margin:5px 0  5px 0} 
+
+   h2{
 margin-top: 72px;
 }
 body{
@@ -64,9 +83,9 @@ border: none;
     color: #fff;
     background: #fff;
 }
-</style>
-</head>
+</style> 
 <body>
+
 <div class="navbar-wrapper">
     <div class="container-fluid">
         <nav class="navbar navbar-fixed-top">
@@ -83,9 +102,9 @@ border: none;
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li ><a href="CustomerHome.html" class="">Home</a></li>
-                        <li> <a href="CustomerProfile.html"> View Customer Profile </a></li>
+                        <li class="active"><a href="CustomerProfile.html">View Customer Profile</a></li>
                         <li><a href="#">Statement Enquiry</a></li>
-                        <li class="active"><a href="FundTransferHomepage.html">Fund Transfer</a></li>
+                        <li ><a href="FundTransferHome.html">Fund Transfer</a></li>
                         
                         
                     </ul>
@@ -101,56 +120,100 @@ border: none;
     </div>
 </div>
 
+
 <div class="container">
-  <h2>Verify Fund Transfer</h2>
-  <form action="/action_page.php">
-    <div class="form-group">
-      <label for="fromAcc">From:</label>
-      <p>from account details</p>
-  </div>
-  
-    <div class="form-group">
-      <label for="toAcc">To:</label>
-   <p>To account details</p>
-    </div>
-  <div class="form-group">
-      <label for="frequency">Frequency:</label>
-        <p>frequency</p>
-    </div>
-  <div class="form-group">
-    <label for="date">Send On:</label>
-        <p>Send on date</p>
-  </div>
-  
-    <div class="form-group">
-      <label for="amount">Amount:</label>
-        <p>amount</p>
-    </div>
-  <br>
-    <a href="CustomerHome.html" class="btn btn-default" role="button">Cancel</a>
-     <a href="FundTransferHomepage.html" class="btn btn-info" role="button">Edit</a>
-      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Submit</button>
-   
+	<div class="row">
+		<h2>Customer name's Profile</h2>
+        
+        
+       <div class="col-md-7 ">
 
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Success</h4>
-        </div>
-        <div class="modal-body">
-          <p>Fund Transfer Successful!</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
-    </div>
-  </div>
+<div class="panel panel-default">
+  <div class="panel-heading">  <h4 >User Profile</h4></div>
+   <div class="panel-body">
+       
+    <div class="box box-info">
+        
+            <div class="box-body">
+                     <div class="col-sm-6">
+                     <div  align="center"> <img alt="User Pic" src="https://x1.xingassets.com/assets/frontend_minified/img/users/nobody_m.original.jpg" id="profile-image1" class="img-circle img-responsive"> 
+                
+                <input id="profile-image-upload" class="hidden" type="file">
+<div style="color:#999;" >click here to change profile image</div>
+        
+                     </div>
+              
+              <br>
+            </div>
+            <div class="col-sm-6">
+            <h4 style="color:#00b1b1;">User Name </h4></span>     
+            </div>
+            <div class="clearfix"></div>
+            <hr style="margin:5px 0 5px 0;">
+ <div class="col-sm-5 col-xs-6 tital " >Customer ID:</div><div class="col-sm-7 col-xs-6 ">38789821</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
 
+<div class="col-sm-5 col-xs-6 tital " >SSN:</div><div class="col-sm-7 col-xs-6 ">216538789821</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >First Name:</div><div class="col-sm-7 col-xs-6 ">Prasad</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Last Name:</div><div class="col-sm-7 col-xs-6"> Huddedar</div>
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Email:</div><div class="col-sm-7 col-xs-6">abc@gmail.com</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Date Of Birth:</div><div class="col-sm-7 col-xs-6">11 Jun 1998</div>
+
+  <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+<div class="col-sm-5 col-xs-6 tital " >Address:</div><div class="col-sm-7 col-xs-6 ">33, California</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+<div class="col-sm-5 col-xs-6 tital " >Registered Mobile Number:</div><div class="col-sm-7 col-xs-6 ">12313242</div>
+     <div class="clearfix"></div>
+<div class="bot-border"></div>
+
+
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+
+        </div>
+       
+            
+    </div> 
+    </div>
+</div>  
+    <script>
+              $(function() {
+    $('#profile-image1').on('click', function() {
+        $('#profile-image-upload').click();
+    });
+});       
+              </script> 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+   </div>
+</div>
 </body>
+
 </html>
+
+         
