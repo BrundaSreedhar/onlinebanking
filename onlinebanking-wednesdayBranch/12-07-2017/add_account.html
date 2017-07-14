@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- This file has been downloaded from Bootsnipp.com. Enjoy! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <style type="text/css">
+        .btn-primary {
+    color: #fff;
+    background-color: #33bbff;
+    border-color: #33bbff;
+}
+    </style>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+</head>
+<body style="padding-right: 98px;">
+<form class="form-horizontal" style="margin-left: 25%;"action='' method="POST">
+  <fieldset>
+    <div id="legend">
+      <label class="" style="padding-left: 25%;" ><h2>Add Account<h2></label>
+    </div>
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >First Name</label>
+      <div class="controls">
+        <input type="text" id="first_name" name="First Name" placeholder="" value="santosh" class="input-xlarge" disabled>
+      </div>
+    </div>
+ <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >Last Name</label>
+      <div class="controls">
+        <input type="text" id="last_name" name="Last Name" placeholder="" value="singh" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >Address Line 1</label>
+      <div class="controls">
+        <input type="text" id="add_line1" name="Address" placeholder="" value="1234 house vijaya villa"  class="input-xlarge" disabled>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >Address Line 2</label>
+      <div class="controls">
+        <input type="text" id="add_line2" name="Address" placeholder="" value="aecs layout chingpokli" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >City/Town</label>
+      <div class="controls">
+        <input type="text" id="city" name="City" placeholder="" value="nellore" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >State</label>
+      <div class="controls">
+        <input type="text" id="state" name="State" placeholder="" value="karnataka" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+      <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >Zip Code</label>
+      <div class="controls">
+        <input type="text" id="zip_code" name="Zip Code" placeholder="" value="456665" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+       
+         <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >Country</label>
+      <div class="controls">
+        <input type="text" id="country" name="Country" placeholder="" value="india" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+<div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >Gender</label>
+      <div class="controls">
+        <input type="text" id="gender" name="female" placeholder="" value="female" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+ 
+      
+        <div class="control-group">
+      <!-- Username -->
+      <label class="control-label" >Date of Birth</label>
+      <div class="controls">
+        <input type="text" id="dob" name="Date of Birth" placeholder="" value="01-03-2017" class="input-xlarge" disabled>
+      </div>
+    </div>
+
+        
+      
+    
+
+        
+        
+     
+
+    <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" >E-mail</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="" value="banku@hmail.com" class="input-xlarge" disabled>
+      
+      </div>
+    </div>
+  <div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" >Contact Number</label>
+      <div class="controls">
+        <input type="text" id="contact_number" name="contact_number" placeholder="" value="9328728728" class="input-xlarge" disabled>
+        
+      </div>
+    </div>
+ 
+   
+
+       <div class="control-group">
+                    <label class="control-label">Select Account Type</label>
+                     <div class="controls">
+                        <select id="country" name="account_type" placeholder="" class="input-xlarge">
+                            <option value="" selected="selected">(please select acount type)</option>
+                            <option value="AF">Savings Account</option>
+                            <option value="AL">Checking Account</option>
+
+                            </select>
+                        </div>
+        
+        
+      </div>
+                    
+                </div>
+
+
+ <div class="control-group">
+    
+      <div class="controls">
+        <button class="btn btn-success" >Cancel</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#edit" >Create Account</button>
+            </div>
+            </div>
+
+
+            <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+      <div class="modal-dialog">
+    <div class="modal-content">
+          <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <h4 class="modal-title custom_align" id="Heading">Account created successfully!!!</h4>
+      </div>
+          <div class="modal-body">
+          <div class="form-group">
+        <div class="control-group">
+      <!-- E-mail -->
+<div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" >Account Number</label>
+      <div class="controls">
+        <input type="text" id="email" name="email" placeholder="" value="122jdhsh34444" class="input-xlarge" disabled>
+      
+      </div>
+    </div>
+
+
+      <label class="control-label" >Customer ID</label>
+      <div class="controls">
+        <input type="text" id="customer_id" name="" placeholder="" value="12345456544" class="input-xlarge" disabled>
+      
+      </div>
+    </div>
+
+<div class="control-group">
+      <!-- E-mail -->
+      <label class="control-label" >User Name</label>
+      <div class="controls">
+        <input type="text" id="user_name" name="user name" placeholder="" value="banku@123" class="input-xlarge" disabled>
+      
+      </div>
+    </div>
+
+
+
+
+        </div>
+        </div>
+          <div class="modal-footer ">
+       
+      </div>
+        </div>
+    <!-- /.modal-content --> 
+  </div>
+      <!-- /.modal-dialog --> 
+    </div> <!-- /.modal-content -->
+     </div>
+
+ <!--   <div class="control-group">
+      <!-- 
+      <div class="controls">
+        <button class="btn btn-success">Cancel</button>
+      
+
+    
+       <button class="btn btn-success" >Create Account</button>
+      </div>
+    </div> -->
+    
+  </fieldset>
+</form>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
+<script type="text/javascript">
+$(document).ready(function(){
+$("#mytable #checkall").click(function () {
+        if ($("#mytable #checkall").is(':checked')) {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", true);
+            });
+
+        } else {
+            $("#mytable input[type=checkbox]").each(function () {
+                $(this).prop("checked", false);
+            });
+        }
+    });
+    
+    $("[data-toggle=tooltip]").tooltip();
+});
+
+</script>
+</body>
+</htm

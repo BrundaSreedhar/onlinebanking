@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="submit_disable.js" type="text/javascript"></script>
+
+   <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+
+<style>
+.form-group {
+    margin-bottom: 15px;
+    width: 70%;
+}
+
+h2{
+margin-top: 72px;
+}
+body{
+    background: #fff;
+}
+.navbar, .dropdown-menu{
+background:#cc0000;
+border: none;
+
+}
+
+.nav>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .dropdown-menu>li>a, .dropdown-menu>li{
+  border-bottom: 3px solid transparent;
+}
+.nav>li>a:focus, .nav>li>a:hover,.nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover{
+  border-bottom: 3px solid transparent;
+  background: none;
+}
+.navbar a, .dropdown-menu>li>a, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover, .navbar-toggle{
+ color: #fff;
+}
+.dropdown-menu{
+      -webkit-box-shadow: none;
+    box-shadow:none;
+}
+
+.nav li:hover:nth-child(8n+1), .nav li.active:nth-child(8n+1){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+2), .nav li.active:nth-child(8n+2){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+3), .nav li.active:nth-child(8n+3){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+4), .nav li.active:nth-child(8n+4){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+5), .nav li.active:nth-child(8n+5){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+6), .nav li.active:nth-child(8n+6){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+7), .nav li.active:nth-child(8n+7){
+  border-bottom: #fff 3px solid;
+}
+.nav li:hover:nth-child(8n+8), .nav li.active:nth-child(8n+8){
+  border-bottom: #3px solid;
+}
+
+.navbar-toggle .icon-bar{
+    color: #fff;
+    background: #fff;
+}
+</style>
+
+
+
+
+
+<script>
+
+    $(function () {
+        $('#datetimepicker6').datetimepicker();
+        $('#datetimepicker7').datetimepicker({
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").setMinDate(e.date);
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+    });
+
+
+$(document).ready(function() {
+    $("input[name$='cars']").click(function() {
+        var test = $(this).val();
+
+        $("div.desc").hide();
+        $("#Cars" + test).show();
+    });
+});
+
+</script>
+</head>
+<body>
+<div class="navbar-wrapper">
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><!--<img src="dollar-sign-and-piles-of-coins.png"  style="width:50px;height:42px;"/>--></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="CustomerHome.html" class="">Home</a></li>
+                        <li ><a href="CustomerProfile.html" class="">View Customer Profile</a></li>
+                        <li><a href="#">Statement Enquiry</a></li>
+                        <li class="active"><a href="FundTransferHomepage.html">Fund Transfer</a></li>
+                        
+                        
+                    </ul>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class=" dropdown"><a href="#" class="dropdown-toggle active" >Signed in as Ronaldo </a>
+                            
+                        </li>
+                        <li class=""><a href="Login.html">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container">
+  <h2>Transfer Funds</h2>
+  <form action="FundTransferVerification.html">
+    <div class="form-group">
+      <label for="fromAcc">From:</label>
+    <select class="form-control" id="fromAcc">
+      <option class ="dropdown-menu"selected disabled>Select Account</option>
+      <option class="dropdown-item">SAV165872... Balance $7432</option>
+      <option class="dropdown-item">CHK165342... Balance $6573249</option>
+      <option class="dropdown-item">SAV121872... Balance $2662</option>
+      <option class="dropdown-item">SAV645872... Balance $55142</option>
+    </select>
+  </div>
+  <div id="myRadioGroup">
+    <div class ="radio">
+      <input type="radio" name="cars" checked="checked" value="2"  />Fund transfer between accounts</br>
+    </div>
+    <div class ="radio">
+      <input type="radio" name="cars" value="3" />Fund transfer to other accounts
+    </div>
+        <div id="Cars2" class="desc">
+             <div class="form-group">
+              <label for="toAcc">To:</label>
+              <select class="form-control" id="toAcc">
+                <option class="dropdown-menu"selected disabled>Select Account</option>
+                <option class="dropdown-item">SAV165872... Balance $7432</option>
+                <option class="dropdown-item">CHK165342... Balance $6573249</option>
+                <option class="dropdown-item">SAV121872... Balance $2662</option>
+                <option class="dropdown-item">SAV645872... Balance $55142</option>
+               </select>
+             </div>
+         </div>
+         <div id="Cars3" class="desc" style="display: none;">
+            <div class="form-group">
+               <label for="externalaccountnumber">To:</label>
+                  <input type="text" class="form-control" id="extaccount" placeholder="Enter Account Number" name="extaccount">
+             </div>
+         </div>
+  </div>
+
+      
+
+
+  <div class="form-group">
+    <label for="date">Send On:</label>
+      <div class="row">
+        <div class='col-sm-6'>
+          <div class="form-group">
+            <div class="input-group date" id="datepicker">
+            <input type='text' class="form-control" placeholder="Select Date" />
+            <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+       
+    </div>
+  </div>
+  
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input type="text" class="form-control" id="amount" placeholder="Enter Amount" name="amount">
+    </div>
+  <br>
+    <a href="CustomerHome.html" class="btn btn-default" role="button">Cancel</a>
+    <input type="submit" id="submit" class="btn btn-info" value="Continue" disabled="disabled"/>
+    </form>
+</div>
+</body>
+</html>
