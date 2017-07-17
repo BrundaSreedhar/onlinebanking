@@ -1,0 +1,157 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account Statement</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="paging.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="scripts/jquery.table.hpaging.min.js"></script>
+    <style>
+    body { background-color:#fafafa;}
+    .container { margin:150px auto; font-family:'Roboto';}
+    table { margin:10px 0;}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Account Statements</h1>
+        
+    <label for="page-size">Page Size:</label>
+    <select class="form-control" id="pglmt">
+      <option class="dropdown-menu"selected disabled>Select Size</option>
+      <option class="dropdown-item">5</option>
+      <option class="dropdown-item">10</option>
+      <option class="dropdown-item">15</option>
+       <option class="dropdown-item">20</option>
+    </select>
+  <button id="btnApply" class="btn btn-danger">Apply</button>
+
+<table id="table1" class="table table-bordered table-striped">
+   <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Transaction&nbsp;ID</th>
+        <th>Transaction&nbsp;type</th>
+        <th>Amount</th>
+        <th>Closing&nbsp;Balance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Frank</td>
+        <td>Shoulder</td>
+        <td>1246</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>John</td>
+        <td>Jameson</td>
+        <td>4564</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Philip</td>
+        <td>Jenkins</td>
+        <td>4456</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Maria</td>
+        <td>Carlston</td>
+        <td>4456</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Julia</td>
+        <td>Tampelton</td>
+        <td>1246</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Jane</td>
+        <td>Conor</td>
+        <td>4456</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Susan</td>
+        <td>Crane</td>
+        <td>1246</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Lucas</td>
+        <td>Fenric</td>
+        <td>4456</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Mark</td>
+        <td>Fenric</td>
+        <td>4456</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>Hilde</td>
+        <td>Mayer</td>
+        <td>4456</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>John</td>
+        <td>Tron</td>
+        <td>1246</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Hans</td>
+        <td>Stark</td>
+        <td>4564</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#table1").hpaging({ "limit": 5});
+        });
+
+        $("#btnApply").click(function () {
+            var lmt = $("#pglmt").val();
+            $("#table1").hpaging("newLimit", lmt);
+        });
+    </script>
+</body>
+</html>
